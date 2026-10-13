@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.png" alt="Kördüğüm Değil Gördüğüm Banner" width="100%" />
+</p>
+
 # 🪢 Kördüğüm-Değil-Gördüğüm
 
 > **"Aşk gelicek cümle eksikler biter."** — *Yunus Emre*  
@@ -59,6 +63,10 @@ Her insan dünyaya tertemiz bir vicdanla ve sevme kabiliyetiyle doğar. Ten reng
 
 ## 🧐 Ontolojik Temel: Neden "Kördüğüm Değil Gördüğüm"?
 
+<p align="center">
+  <img src="assets/kordugum-vs-gordugum.png" alt="Kördüğüm vs. Gördüğüm" width="100%" />
+</p>
+
 ### Kördüğümün Anatomisi
 İnsan zihni, tanımadığı ve anlamadığı şeyden korkar. Korku şüpheyi, şüphe mesafeyi, mesafe ise düşmanlığı doğurur. Birey kendi içindeki yetersizlikleri, eksiklikleri ve acıları ötekinin kimliğine yansıttığında ortaya çıkan o zehirli yapıya **"ırkçılık"** diyoruz.
 
@@ -81,6 +89,10 @@ Biz bu kördüğümü çözmek için o düğümle boğuşmuyoruz. Çekildikçe s
 ---
 
 ## 📜 Kadim Bilgelik ve Düşünce Külliyatı
+
+<p align="center">
+  <img src="assets/kadim-bilgelik.png" alt="Kadim Bilgelik ve Düşünce Külliyatı" width="100%" />
+</p>
 
 Bu projenin her kod satırı, yüzyıllardır dünyanın dört bir yanında aynı hakikati fısıldayan bilgelerin, mutasavvıfların, şairlerin ve adalet savaşçılarının ortak vicdan nefesiyle yazılmıştır.
 
@@ -331,6 +343,10 @@ Zulmün, ayrımcılığın ve köleliğin en koyu karanlığında sesini yüksel
 
 ## 🤖 Teknoloji, Yapay Zekâ ve Vicdan (Techno-Humanism)
 
+<p align="center">
+  <img src="assets/techno-humanism.png" alt="Techno-Humanism & Açık Kaynak Vicdan Yazılımı" width="100%" />
+</p>
+
 Çağımızın en büyük trajedilerinden biri, teknolojinin kutuplaşmayı ve nefreti körükleyen bir yankı odasına (echo chamber) dönüştürülmesidir. Sosyal medya algoritmaları öfkeyi ödüllendirmekte; önyargılı verilerle beslenen yapay zekâ modelleri tarihsel ayrımcılıkları yeniden üretmektedir.
 
 Biz bu gidişata karşı **"Teknolojik İnsancıllık" (Techno-Humanism)** hareketini başlatıyoruz:
@@ -411,6 +427,10 @@ python web/serve.py
 ---
 
 ## 🛠 Repository Katmanları ve Teknik Mimari
+
+<p align="center">
+  <img src="assets/logic-of-unity.png" alt="Logic of Unity - 24 Dünya Dilinde Sevgi Matrisi" width="100%" />
+</p>
 
 ### 1. `Logic-of-Unity/` (Birliğin Mantığı)
 
@@ -557,6 +577,10 @@ Detaylı rehber için bkz. → [`CONTRIBUTING.md`](CONTRIBUTING.md)
 ---
 
 ## 📜 Büyük İnsanlık Manifestosu & Kapanış Andı
+
+<p align="center">
+  <img src="assets/insanlik-manifestosu.png" alt="Büyük İnsanlık Manifestosu ve Gönül Andı" width="100%" />
+</p>
 
 Biz bu satırları okuyan, bu koda katkı sunan ve bu davaya gönül verenler olarak ikrar ederiz ki:
 
