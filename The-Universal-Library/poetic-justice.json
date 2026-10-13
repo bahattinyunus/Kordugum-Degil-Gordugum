@@ -52,5 +52,94 @@
       "A person is a person through other people."
     ],
     "theme": "Shared Humanity"
+  },
+  {
+    "poet": "Aşık Veysel",
+    "country": "Türkiye",
+    "lines": [
+      "Beni hor görme gardaşım,",
+      "Sen altınsın ben tunç muyum?",
+      "Aynı vardan var olmuşuz,",
+      "Sen gümüşsün ben saç mıyım?"
+    ],
+    "theme": "Egalitarian Dignity"
+  },
+  {
+    "poet": "Langston Hughes",
+    "country": "USA",
+    "lines": [
+      "I, too, sing America.",
+      "I am the darker brother.",
+      "They send me to eat in the kitchen",
+      "When company comes,",
+      "But I laugh, and eat well, and grow strong.",
+      "Tomorrow, I'll be at the table."
+    ],
+    "theme": "Racial Justice & Resilience"
+  },
+  {
+    "poet": "Mevlana Celaleddin-i Rumi",
+    "country": "Konya / Horasan",
+    "lines": [
+      "Sevgiyle acılar tatlılaşır,",
+      "Sevgiyle bakırlar altın olur,",
+      "Sevgiyle tortular durulur,",
+      "Sevgiyle ölüler dirilir."
+    ],
+    "theme": "Alchemy of Love"
+  },
+  {
+    "poet": "Nazım Hikmet",
+    "country": "Türkiye",
+    "lines": [
+      "Yaşamak bir ağaç gibi tek ve hür",
+      "ve bir orman gibi kardeşçesine,",
+      "bu hasret bizim..."
+    ],
+    "theme": "Brotherhood in Freedom"
+  },
+  {
+    "poet": "Rabindranath Tagore",
+    "country": "India",
+    "lines": [
+      "Where the mind is without fear and the head is held high;",
+      "Where knowledge is free;",
+      "Where the world has not been broken up into fragments",
+      "By narrow domestic walls..."
+    ],
+    "theme": "Universal Brotherhood"
+  },
+  {
+    "poet": "Khalil Gibran",
+    "country": "Lebanon",
+    "lines": [
+      "You are my brother and I love you.",
+      "I love you when you prostrate in your mosque,",
+      "kneel in your church, or pray in your synagogue.",
+      "You and I are all sons of one faith: the Spirit."
+    ],
+    "theme": "Spiritual Kinship"
+  },
+  {
+    "poet": "Aimé Césaire",
+    "country": "Martinique",
+    "lines": [
+      "Et nous sommes debout maintenant, mon pays et moi,",
+      "les cheveux dans le vent, nos petites mains maintenant dans son poing énorme",
+      "et la force n'est pas en nous, mais au-dessus de nous,",
+      "dans une voix qui vrille la nuit et l'audience."
+    ],
+    "theme": "Universal Human Awakening"
+  },
+  {
+    "poet": "Pablo Neruda",
+    "country": "Chile",
+    "lines": [
+      "No quiero la patria dividida",
+      "en siete puñales de sangre...",
+      "Pido paz para el obrero que camina,",
+      "Pido paz para el trigo que nace."
+    ],
+    "theme": "Peace for All Mankind"
   }
 ]

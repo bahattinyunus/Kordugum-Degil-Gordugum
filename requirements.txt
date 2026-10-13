@@ -1,0 +1,3 @@
+# Kördüğüm Değil Gördüğüm — Gereksinimler
+# Çekirdek mantık tamamen standart Python kütüphaneleri (re, json, sys, os) ile çalışır.
+# Harici zorunlu bağımlılık yoktur. Sıfır bağımlılık (Zero-Dependency) felsefesi benimsenmiştir.

@@ -1,8 +1,14 @@
 # 🪢 Kördüğüm-Değil-Gördüğüm
 
-> **"Aşk gelicek cümle eksikler biter."** - *Yunus Emre*
+> **"Aşk gelicek cümle eksikler biter."** — *Yunus Emre*
 
-Bu repository, insanlığın binlerce yıldır kendi elleriyle attığı o en sert düğümü —ırkçılık ve ayrımcılığı— çözmek için değil, o düğümün aslında hiç var olmaması gerektiğini hatırlatmak için kuruldu. Bizim için dünya, sınırlardan ve renklerden ibaret bir harita değil; ruhların birleştiği devasa bir **Aşk Meydanı**dır.
+[![CI - Gönül Testleri](https://github.com/arch-yunus/Kordugum-Degil-Gordugum/actions/workflows/ci.yml/badge.svg)](https://github.com/arch-yunus/Kordugum-Degil-Gordugum/actions/workflows/ci.yml)
+![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue.svg)
+![Diller](https://img.shields.io/badge/D%C3%BCnya%20Dilleri-24%20Dil-purple.svg)
+![Bilgeler](https://img.shields.io/badge/Bilgelik%20Ar%C5%9Fivi-16%20D%C3%BC%C5%9F%C3%BCn%C3%BCr-gold.svg)
+![Lisans](https://img.shields.io/badge/Lisans-Universal--Love-green.svg)
+
+Bu repository, insanlığın binlerce yıldır kendi elleriyle attığı o en sert düğümü —ırkçılık, ayrımcılık ve ötekileştirmeyi— çözmekle vakit kaybetmek için değil; o düğümün aslında **hiç var olmaması gerektiğini** hatırlatmak için kuruldu. Bizim için dünya, sınırlardan ve renklerden ibaret bir harita değil; ruhların birleştiği devasa bir **Aşk Meydanı**dır.
 
 ---
 
@@ -15,72 +21,88 @@ Bu repository, insanlığın binlerce yıldır kendi elleriyle attığı o en se
 
 ---
 
-## 📜 Kadim Bilgelikten Beslenenler (Özlü Sözler)
+## 🌐 Canlı Web Portalı (Gönül Portalı)
 
-Bu projenin kalbi, yüzyıllardır aynı şeyi söyleyen ama farklı dillerde konuşan bilgelerin sözleriyle atıyor:
+Tüm algoritmaları, kütüphaneyi, dünya dillerini ve şiirleri tarayıcınızda deneyimleyin:
 
-### 🇹🇷 Anadolu'nun Nefesi
-* *"Düşmanımız kindir bizim, kamu alem birdir bize."* - **Yunus Emre**
-* *"Yetmiş iki milleti bir gör."* - **Hacı Bektaş-i Veli**
-
-### 🌍 Evrensel Haykırışlar
-* *"Irkçılık, insanın kendi yetersizliğini başkalarının varlığı üzerinden telafi etme çabasıdır."*
-* *"Sadece sevgi, nefreti iyileştirebilir; çünkü nefret, sevginin yokluğundan doğan bir hastalıktır."*
-* *"Gökkuşağı, renkleri birbirine karışmadığı için değil, yan yana durduğu için güzeldir."*
+```bash
+# Yerel web sunucusunu başlatın
+python web/serve.py
+```
+*(Veya doğrudan `web/index.html` dosyasını herhangi bir web tarayıcısında açabilirsiniz; sıfır harici bağımlılık, %100 çevrimdışı çalışır!)*
 
 ---
 
 ## 🛠 Repository Katmanları (Derin Yapı)
 
-Bu repo sadece yazı değil, bir eylem planıdır:
+Bu repo sadece yazı değil, yaşayan bir vicdan ve eylem planıdır:
 
 ### 1. `Logic-of-Unity/` (Birliğin Mantığı)
-Irkçılığın temelinde yatan "ötekileştirme" dilini analiz eden ve şifalandıran algoritmalar.
-* **`bias_detector.py`** — Metinlerdeki önyargıları tespit eder; şiddet skoru ve seviye raporu çıkarır.
-* **`empathy_generator.py`** — Sert dilleri sevgi diline dönüştürür; "Gönül Önerileri" sunar.
-* **`unity_analyzer.py`** — Metindeki birleştirici kelimeleri (Sevgi, Birlik, Paylaşım vb.) ölçerek **Gönül Endeksi** hesaplar.
-* **`gonul_terminali.py`** — ✨ Tüm araçları bir araya getiren renkli **CLI terminali**. Demo: `python Logic-of-Unity/gonul_terminali.py --hepsi "metin buraya"`
+Irkçılığın temelinde yatan "ötekileştirme" dilini analiz eden ve şifalandıran sıfır-bağımlılıklı Python algoritmaları:
+* **`bias_detector.py`** — Metinlerdeki önyargıları tespit eder; şiddet skoru, kategori dökümü ve yapıcı tavsiye sunar.
+* **`empathy_generator.py`** — Sert ve kırıcı ifadeleri sevgi diline dönüştürür; ses uyumlu şefkat onarımı yapar ve "Gönül Esintisi" fısıldar.
+* **`unity_analyzer.py`** — Metindeki 6 boyuttaki birleştirici köprüleri (Sevgi, Tevhid, Kardeşlik, Hoşgörü, Paylaşım, Adalet) ölçerek **Gönül Endeksi** (0-100) ve Makam hesaplar.
+* **`wisdom_recommender.py`** — İncelenen metnin konusuna veya temasına göre kadim bilgelerden iyileştirici sözler ve şiirler eşleştirir.
+* **`gonul_terminali.py`** — Renkli, ilerleme çubuklu gelişmiş CLI aracı ve `--interaktif` terminal konsolu.
+  ```bash
+  # Tam analiz ve bilge tavsiyesi
+  python Logic-of-Unity/gonul_terminali.py --hepsi "yabancılar burada istenmiyor"
+
+  # İnteraktif diyalog konsolu
+  python Logic-of-Unity/gonul_terminali.py --interaktif
+
+  # JSON formatında veri çıktısı (API & Otomasyon için)
+  python Logic-of-Unity/gonul_terminali.py --json --hepsi "birlik ve sevgi"
+  ```
 
 ### 2. `The-Universal-Library/` (Evrensel Kütüphane)
-* **`antiracist-manifestos.md`** — MLK'dan Einstein'a, Yunus Emre'den Baha'i yazılarına geniş bir manifesto koleksiyonu.
-* **`poetic-justice.json`** — Japonya'dan Güney Afrika'ya, Anadolu'dan Amerika'ya dünya şiiri arşivi.
-* **`sessiz-kahramanlar.md`** — Tarihin ders kitaplarına giremeyen ama dünyayı değiştiren sıradan insanların hikayeleri.
-* **`tarihin-kirinyuzu.md`** — Sevginin ve insanlığın kazandığı tarihsel kırılma noktaları.
+* **`antiracist-manifestos.md`** — Veda Hutbesi'nden MLK'ya, Einstein'dan Ambedkar ve UNESCO 1978 bildirisine 10 büyük tarihsel manifesto.
+* **`poetic-justice.json`** — Yunus Emre, Maya Angelou, Sadi Şirazi, Aşık Veysel, Langston Hughes, Tagore, Pablo Neruda ve Aimé Césaire'den dünya barış şiirleri.
+* **`sessiz-kahramanlar.md`** — Chiune Sugihara, Gino Bartali, Harriet Tubman, Nicholas Winton ve Irena Sendler gibi vicdanıyla dünyayı kurtaran sessiz kahramanlar.
+* **`tarihin-kirinyuzu.md`** — 1914 Noel Ateşkesi'nden Tuz Yürüyüşü'ne, Berlin Duvarı'nın yıkılışından Johannesburg seçimlerine sevginin kazandığı anlar.
 
 ### 3. `Wisdom-Archive/` (Bilgelik Arşivi)
-Irk ayrımına karşı çıkmış, sevginin gücünü kanıtlamış kadim ve modern bilgeler:
+Irk ayrımına karşı çıkmış, sevginin ve birliğin gücünü kanıtlamış 16 bilge düşünür:
 
-| Düşünür | Köken | Temel Kavram |
+| Düşünür | Köken | Temel İlke |
 |---|---|---|
-| Yunus Emre | 🇹🇷 Anadolu | Sevgi / Gönül |
-| Mevlana | 🇮🇷 Konya | Kapsayıcılık |
-| Hacı Bektaş-i Veli | 🇹🇷 Anadolu | 72 Milleti Bir Gör |
-| Nelson Mandela | 🇿🇦 G. Afrika | Uzlaşma / Ubuntu |
-| Malcolm X | 🇺🇸 ABD | Dönüşüm / Adalet |
-| Mahatma Gandhi | 🇮🇳 Hindistan | Satyagraha / Şiddetsizlik |
-| Rosa Parks | 🇺🇸 ABD | Sessiz Cesaret |
-| Desmond Tutu | 🇿🇦 G. Afrika | Ubuntu / Affetme |
-| José Martí | 🇨🇺 Küba | La Raza Humana |
-| Simone Weil | 🇫🇷 Fransa | Dikkat / Kök Salmak |
+| **Yunus Emre** | 🇹🇷 Anadolu | Sevgi / Gönül Yapmak |
+| **Mevlana Celaleddin-i Rumi** | 🇮🇷/🇹🇷 Konya | Sonsuz Kapsayıcılık |
+| **Hacı Bektaş-i Veli** | 🇹🇷 Anadolu | 72 Milleti Bir Gör |
+| **Âşık Veysel** | 🇹🇷 Anadolu | Toprak ve Eşit İnsanlık |
+| **Nelson Mandela** | 🇿🇦 Güney Afrika | Uzlaşma / Ubuntu |
+| **Martin Luther King Jr.** | 🇺🇸 ABD | Radikal Sevgi / Şiddetsizlik |
+| **Malcolm X** | 🇺🇸 ABD | Dönüşüm / Evrensel Adalet |
+| **Mahatma Gandhi** | 🇮🇳 Hindistan | Satyagraha (Hakikat Gücü) |
+| **Halil Cibran** | 🇱🇧 Lübnan | İnsanlık Ailesi / Kozmik Sevgi |
+| **Rabindranath Tagore** | 🇮🇳 Hindistan | Parçalanmamış Bir Dünya |
+| **Rosa Parks** | 🇺🇸 ABD | Sessiz ve Eğilmez Cesaret |
+| **Desmond Tutu** | 🇿🇦 Güney Afrika | Ubuntu / Affedicilik |
+| **Wangari Maathai** | 🇰🇪 Kenya | Barış Ağaçları / Onur |
+| **James Baldwin** | 🇺🇸 ABD | Aynaya Bakma / Cesur Sevgi |
+| **José Martí** | 🇨🇺 Küba | La Raza Humana |
+| **Simone Weil** | 🇫🇷 Fransa | Dikkat / Şefkatli Kök Salma |
 
-### 4. `languages/` (Dünya Dilleri)
-"Seni seviyorum, biz biriz" — 13 dilde:
+### 4. `languages/` (Dünya Dilleri — 24 Dilde "Biz Biriz")
+"Seni seviyorum, biz biriz ve kardeşiz" — 24 dünya dilinde:
 
-`tr` • `en` • `ar` • `fr` • `es` • `de` • `sw` • `pt` • `ru` • `hi` • `zh` • `ja` • `yo`
+`tr` • `en` • `ku` • `ar` • `es` • `fr` • `de` • `sw` • `az` • `fa` • `ru` • `hi` • `zh` • `ja` • `yo` • `pt` • `it` • `el` • `hy` • `ko` • `ur` • `nl` • `pl` • `he`
 
-### 5. `stories/` (Hikâyeler)
-README'nin "Derdini Anlat" çağrısına cevap veren, gerçek insanlardan gerçek anlar. İlk hikâye içeride. Seninkini eklemek için bkz. `stories/README.md`.
+### 5. `stories/` (Gerçek İnsan Hikâyeleri)
+* **`anonim-tren-hikayesi.md`** — Tren garında kurulan bir cümlelik köprü.
+* **`zeytin-dalini-uzatmak.md`** — Ege'de bir tepsi zeytin ve sıcak ekmekle yıkılan duvarlar.
+* **`sinirlarin-otesindeki-ekmek.md`** — Tercümana ihtiyaç duymayan fırıncı merhameti.
 
 ---
 
-## 🕊️ "Biz Aşk İçin Gelmişiz Bu Dünyaya" Manifestosu
+## 🧪 Testleri Çalıştırma
 
-Biz bu repoya katkı verenler olarak inanıyoruz ki:
-1.  **Hiç kimse nefret ederek doğmaz.** Nefret sonradan üretilir. Biz sevgiyi hatırlatacağız.
-2.  **Renkler Tanrı'nın paletidir.** Bir rengi diğerinden üstün tutmak, sanatçıya hakarettir.
-3.  **Teknoloji birleştiricidir.** Kod satırlarımız arasına sadece mantık değil, vicdan da ekliyoruz.
+Projeyi test etmek için sıfır kurulum gereklidir:
 
-Daha fazlası için → [`MANIFESTO.md`](MANIFESTO.md)
+```bash
+# Tüm birim testleri koşturun
+python run_tests.py
+```
 
 ---
 
@@ -88,10 +110,10 @@ Daha fazlası için → [`MANIFESTO.md`](MANIFESTO.md)
 
 Bu projeye katkı yapmak için yazılımcı olmana gerek yok, **insan** olman yeterli. Nasıl başlayacağın için bkz. → [`CONTRIBUTING.md`](CONTRIBUTING.md)
 
-**Hızlı başlangıç:**
-* **Dilini Paylaş:** `languages/` klasörüne kendi dilinde bir dosya ekle.
-* **Derdini Anlat:** `stories/` klasörüne kişisel bir hikâye ekle.
-* **Aşkı Tanımla:** `MANIFESTO.md`'ye kendi cümlenle katkı yap.
+* **Dilini Paylaş:** `languages/` klasörüne kendi ana dilinde bir dosya ekle.
+* **Derdini & Şifanı Anlat:** `stories/` klasörüne gerçek bir anını ekle.
+* **Manifestoya Ses Ver:** `MANIFESTO.md`'ye kendi cümleni kazı.
+* **Mantığı Genişlet:** `Logic-of-Unity/` algoritmalarına yeni eşleşmeler ve diller ekle.
 
 ---
 
@@ -104,6 +126,4 @@ Biz bakmıyoruz, görüyoruz. Biz dövüşmüyoruz, seviyoruz. Bu dijital toprak
 ---
 
 ### ⚖️ Lisans
-Bu proje **No-Hate (Nefret-Yok)** ve **Universal-Love (Evrensel Aşk)** lisansıyla korunmaktadır. Bu repo içindeki her fikir, insanlığın ortak malıdır.
-
----
+Bu proje **No-Hate (Nefret-Yok)** ve **Universal-Love (Evrensel Aşk)** lisansıyla korunmaktadır. Bu repo içindeki her fikir, insanlığın ortak mirasıdır.

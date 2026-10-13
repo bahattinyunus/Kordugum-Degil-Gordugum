@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kördüğüm Değil Gördüğüm — Gönül Portalı</title>
+  <style>
+    :root {
+      --bg: #0f141c;
+      --card-bg: #18202c;
+      --card-border: #2a374a;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --primary: #f59e0b;
+      --primary-light: #fbbf24;
+      --accent: #10b981;
+      --rose: #f43f5e;
+      --cyan: #06b6d4;
+      --purple: #a855f7;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.6;
+      padding-bottom: 60px;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e1b4b 0%, #311042 50%, #0f172a 100%);
+      padding: 60px 20px 40px;
+      text-align: center;
+      border-bottom: 1px solid #3b2d54;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    .knot-icon {
+      font-size: 3.5rem;
+      display: inline-block;
+      margin-bottom: 10px;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(to right, #fcd34d, #f472b6, #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+
+    .motto {
+      font-size: 1.2rem;
+      color: #cbd5e1;
+      font-style: italic;
+      max-width: 650px;
+      margin: 0 auto 20px;
+    }
+
+    .badge-bar {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #f1f5f9;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto 0;
+      padding: 0 20px;
+    }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn:hover {
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .tab-btn.active {
+      background: linear-gradient(135deg, #d97706, #b45309);
+      color: #fff;
+      border-color: var(--primary-light);
+      box-shadow: 0 4px 15px rgba(217, 119, 6, 0.35);
+    }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; animation: fadeIn 0.3s ease; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Card styling */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    }
+
+    .card h2 {
+      font-size: 1.4rem;
+      color: #f8fafc;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Analyzer UI */
+    .textarea-box {
+      width: 100%;
+      min-height: 110px;
+      background: #0b0f16;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 16px;
+      color: #f8fafc;
+      font-size: 1rem;
+      font-family: inherit;
+      resize: vertical;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .textarea-box:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(16, 185, 129, 0.35);
+    }
+
+    .btn-secondary {
+      background: #1e293b;
+      color: #cbd5e1;
+      border: 1px solid #334155;
+    }
+
+    .btn-secondary:hover {
+      background: #334155;
+      box-shadow: none;
+      transform: none;
+    }
+
+    /* Results */
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+
+    .result-panel {
+      background: #0f1622;
+      border: 1px solid #233144;
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .result-panel h3 {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .meter-container {
+      margin: 14px 0;
+    }
+
+    .meter-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .meter-bar {
+      height: 10px;
+      background: #1e293b;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .meter-fill {
+      height: 100%;
+      border-radius: 999px;
+      transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .fill-green { background: linear-gradient(90deg, #10b981, #34d399); }
+    .fill-amber { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+    .fill-rose { background: linear-gradient(90deg, #f43f5e, #fb7185); }
+
+    .quote-box {
+      background: rgba(168, 85, 247, 0.08);
+      border-left: 4px solid var(--purple);
+      padding: 16px;
+      border-radius: 0 10px 10px 0;
+      margin-top: 14px;
+      font-style: italic;
+    }
+
+    .quote-author {
+      margin-top: 8px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #d8b4fe;
+    }
+
+    /* Cards Grid */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .item-card {
+      background: #131b26;
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 20px;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .item-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--primary);
+    }
+
+    .item-card h4 {
+      color: #f1f5f9;
+      margin-bottom: 6px;
+      font-size: 1.15rem;
+    }
+
+    .item-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .poem-lines {
+      white-space: pre-line;
+      font-size: 0.92rem;
+      color: #cbd5e1;
+      font-style: italic;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      padding: 20px;
+      border-top: 1px solid #1e293b;
+    }
+
+    footer a { color: var(--primary-light); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="knot-icon">🪢</div>
+    <h1>Kördüğüm Değil Gördüğüm</h1>
+    <p class="motto">"Gözün gördüğüne gönül katılmazsa, bakış sadece bir kördüğümdür." — Mevlana</p>
+    <div class="badge-bar">
+      <span class="badge">🕊️ 16 Bilge & Düşünür</span>
+      <span class="badge">🌍 24 Dünya Dili</span>
+      <span class="badge">📜 13 Evrensel Şiir</span>
+      <span class="badge">⚡ Logic-of-Unity Çekirdeği</span>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('analyzer')">⚡ Canlı Gönül Terminali</button>
+      <button class="tab-btn" onclick="switchTab('sages')">🕊️ Bilgelik Arşivi</button>
+      <button class="tab-btn" onclick="switchTab('poetry')">📜 Adalet Şiirleri</button>
+      <button class="tab-btn" onclick="switchTab('languages')">🌍 Dünya Dilleri</button>
+      <button class="tab-btn" onclick="switchTab('stories')">📖 İnsan Hikâyeleri</button>
+    </div>
+
+    <!-- TAB 1: Canlı Analizör -->
+    <div id="tab-analyzer" class="tab-content active">
+      <div class="card">
+        <h2>✨ Sevginin Mantığı: Gerçek Zamanlı Metin Analizi</h2>
+        <p style="color: var(--text-muted); margin-bottom: 14px;">
+          Metninizi yazın; sistem önyargıları tespit etsin, sert dili şefkatle dönüştürsün ve metindeki Birlik & Gönül köprülerini ölçsün.
+        </p>
+
+        <textarea id="textInput" class="textarea-box" placeholder="İncelemek istediğiniz metni buraya yazın... (Örnek: 'onlar barbar yabancılar burada istenmiyor')" rows="3"></textarea>
+
+        <div class="btn-row">
+          <button class="btn" onclick="runAnalysis()">🔍 Analiz Et & Dönüştür</button>
+          <button class="btn btn-secondary" onclick="loadSample(1)">Örnek 1: Ayrıştırıcı Cümle</button>
+          <button class="btn btn-secondary" onclick="loadSample(2)">Örnek 2: Birleştirici Cümle</button>
+          <button class="btn btn-secondary" onclick="loadSample(3)">Örnek 3: İngilizce Örnek</button>
+        </div>
+
+        <div id="resultsArea" style="display: none;">
+          <div class="results-grid">
+            <!-- 1. Önyargı -->
+            <div class="result-panel">
+              <h3 style="color: var(--rose);">🔍 Önyargı & Ayrımcılık</h3>
+              <div class="meter-container">
+                <div class="meter-label">
+                  <span id="biasStatus">Durum: İnceleniyor</span>
+                  <span id="biasScore">0/100</span>
+                </div>
+                <div class="meter-bar">
+                  <div id="biasBar" class="meter-fill fill-rose" style="width: 0%;"></div>
+                </div>
+              </div>
+              <p id="biasDetail" style="font-size: 0.92rem; color: #cbd5e1;"></p>
+            </div>
+
+            <!-- 2. Birlik Endeksi -->
+            <div class="result-panel">
+              <h3 style="color: var(--accent);">🌐 Birlik & Gönül Endeksi</h3>
+              <div class="meter-container">
+                <div class="meter-label">
+                  <span id="unityLevel">Makam: Bekliyor</span>
+                  <span id="unityScore">0/100</span>
+                </div>
+                <div class="meter-bar">
+                  <div id="unityBar" class="meter-fill fill-green" style="width: 0%;"></div>
+                </div>
+              </div>
+              <p id="unityDetail" style="font-size: 0.92rem; color: #cbd5e1;"></p>
+            </div>
+
+            <!-- 3. Empatik Dönüşüm -->
+            <div class="result-panel" style="grid-column: 1 / -1;">
+              <h3 style="color: var(--cyan);">💚 Empatik Dönüşüm & Onarım</h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">Dönüştürülmüş Sevgi Dili:</p>
+              <div id="transformedText" style="font-size: 1.1rem; color: #a7f3d0; font-weight: 600; padding: 12px; background: rgba(16, 185, 129, 0.1); border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.25);"></div>
+              <div class="quote-box">
+                <p id="harmonyTip"></p>
+                <div class="quote-author">🍃 Gönül Esintisi</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Bilgelik Tavsiyesi -->
+          <div class="card" style="margin-top: 24px; background: #1a162b; border-color: #3b2d54;">
+            <h3 style="color: #c084fc;">🕊️ Kadim Bilgelikten Bu Metne Şifa</h3>
+            <div class="quote-box" style="background: rgba(192, 132, 252, 0.08); border-color: #c084fc;">
+              <p id="wisdomQuote" style="font-size: 1.05rem;"></p>
+              <div id="wisdomAuthor" class="quote-author"></div>
+              <p id="wisdomContext" style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;"></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TAB 2: Bilgeler -->
+    <div id="tab-sages" class="tab-content">
+      <div class="grid-3" id="sagesContainer"></div>
+    </div>
+
+    <!-- TAB 3: Şiirler -->
+    <div id="tab-poetry" class="tab-content">
+      <div class="grid-3" id="poetryContainer"></div>
+    </div>
+
+    <!-- TAB 4: Diller -->
+    <div id="tab-languages" class="tab-content">
+      <div class="grid-3" id="languagesContainer"></div>
+    </div>
+
+    <!-- TAB 5: Hikâyeler -->
+    <div id="tab-stories" class="tab-content">
+      <div id="storiesContainer"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>🪢 <strong>Kördüğüm Değil Gördüğüm</strong> — Açık Kaynak İnsanlık Projesi</p>
+    <p style="margin-top: 6px;">Lisans: <em>Universal-Love & No-Hate</em> • "Aşk gelicek cümle eksikler biter."</p>
+  </footer>
+
+  <script>
+    // Tab switching
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      event.target.classList.add('active');
+      document.getElementById('tab-' + tabId).classList.add('active');
+    }
+
+    // Sample loaders
+    function loadSample(num) {
+      const samples = {
+        1: "Yabancılar ve barbarlar burada istenmiyor, defolun!",
+        2: "Biz sevgiyle, dostlukla ve bütün canlarla barış içinde bir dünya kuracağız. Her soframızı paylaşırız.",
+        3: "Those people are uncivilized savages, get out!"
+      };
+      document.getElementById('textInput').value = samples[num] || "";
+      runAnalysis();
+    }
+
+    // Client-side implementation of Logic-of-Unity for instantaneous offline web usage
+    const BIAS_RULES = [
+      { pattern: /barbar(lar|ın|a|ı)?/gi, weight: 12, name: "İnsanlıktan Çıkarma" },
+      { pattern: /savages?/gi, weight: 12, name: "Dehumanization" },
+      { pattern: /aşağılık/gi, weight: 12, name: "Aşağılama" },
+      { pattern: /inferior/gi, weight: 12, name: "Inferiority label" },
+      { pattern: /üstün ırk/gi, weight: 10, name: "Üstünlük Taslama" },
+      { pattern: /defol(un)?/gi, weight: 10, name: "Dışlama" },
+      { pattern: /get out/gi, weight: 10, name: "Exclusion" },
+      { pattern: /istenmiyor(lar)?/gi, weight: 10, name: "Reddetme" },
+      { pattern: /yobaz(lar)?/gi, weight: 6, name: "Kalıpyargı" },
+      { pattern: /uncivilized/gi, weight: 6, name: "Stereotype" },
+      { pattern: /onlar hep böyle/gi, weight: 4, name: "Genelleme" },
+      { pattern: /they always/gi, weight: 4, name: "Generalization" }
+    ];
+
+    const TR_TRANSFORM = [
+      { p: /\byabancılar(a|da|dan|ı|la)?\b/gi, r: "misafirler$1" },
+      { p: /\byabancı\b/gi, r: "misafir" },
+      { p: /\bbarbarlar(a|da|dan|ı|la)?\b/gi, r: "yol arkadaşlarımız$1" },
+      { p: /\bbarbar\b/gi, r: "kültür elçisi" },
+      { p: /\bonlara\b/gi, r: "kardeşlerimize" },
+      { p: /\bonları\b/gi, r: "kardeşlerimizi" },
+      { p: /\bonlardan\b/gi, r: "kardeşlerimizden" },
+      { p: /\bonlar\b/gi, r: "kardeşlerimiz" },
+      { p: /\bnefret ediyorum\b/gi, r: "anlamaya niyet ediyorum" },
+      { p: /\bistenmiyor(lar)?\b/gi, r: "sevgiyle karşılanmayı hak ediyorlar" },
+      { p: /\bdefol(un)?\b/gi, r: "birlikte soframızı paylaşalım" },
+      { p: /\bthose people\b/gi, r: "our fellow neighbors" },
+      { p: /\bthey are inferior\b/gi, r: "we share equal human dignity" },
+      { p: /\bsavages?\b/gi, r: "our diverse brothers and sisters" },
+      { p: /\bget out\b/gi, r: "welcome to our common table" }
+    ];
+
+    const UNITY_WORDS = [
+      { cat: "Sevgi & Muhabbet", p: /\b(sevgi|aşk|muhabbet|şefkat|merhamet|love|amour|amor)\w*/gi },
+      { cat: "Birlik & Tevhid", p: /\b(birlik|beraber|bütün|tevhid|can cana|unity|oneness|together|ubuntu)\w*/gi },
+      { cat: "Kardeşlik & Dayanışma", p: /\b(kardeş|dost|yol arkadaş|dayanışma|canlar|brother|sister|solidarity)\w*/gi },
+      { cat: "Hoşgörü & Empati", p: /\b(hoşgörü|anlayış|empati|sabır|tolerance|empathy)\w*/gi },
+      { cat: "Paylaşım & Cömertlik", p: /\b(paylaş|bölüş|sofra|cömert|share|sharing|partage)\w*/gi },
+      { cat: "Barış & Adalet", p: /\b(barış|adalet|huzur|sulh|peace|justice|paix|paz)\w*/gi }
+    ];
+
+    const WISDOM_LIST = [
+      { s: "Yunus Emre", e: "13. Yüzyıl Anadolu", q: "Düşmanımız kindir bizim, kamu alem birdir bize. Yaratılanı severiz, Yaradan'dan ötürü.", c: "Ayrılık ve düşmanlık duygusuna karşı birliğin ebedi ilacı." },
+      { s: "Mevlana Celaleddin-i Rumi", e: "13. Yüzyıl Konya", q: "Gel, gel, ne olursan ol yine gel! İster kâfir, ister mecusi, ister puta tapan ol yine gel. Bizim dergâhımız ümitsizlik dergâhı değildir.", c: "Hiç kimseyi dışarıda bırakmayan sonsuz şefkat kapısı." },
+      { s: "Hacı Bektaş-i Veli", e: "13. Yüzyıl Horasan & Kapadokya", q: "Yetmiş iki milleti bir gör. Bir olalım, iri olalım, diri olalım. İncinsen de incitme.", c: "Farklılıkların tek bir canda buluşma çağrısı." },
+      { s: "Martin Luther King Jr.", e: "1963 ABD", q: "Karanlık karanlığı kovamaz; bunu sadece ışık yapabilir. Nefret nefreti kovamaz; bunu sadece sevgi yapabilir.", c: "Nefret döngüsünü şiddetsiz sevgiyle kırma ilkesi." },
+      { s: "Nelson Mandela", e: "1994 Güney Afrika", q: "Hiç kimse derisinin rengi, geçmişi ya da dini yüzünden bir diğerinden nefret ederek doğmaz. İnsanlar nefret etmeyi öğrenirler; öyleyse onlara sevmeyi de öğretebiliriz.", c: "Sevginin insanın fıtratındaki en doğal güç olduğu gerçeği." },
+      { s: "Aşık Veysel", e: "20. Yüzyıl Sivas", q: "Beni hor görme gardaşım, sen altınsın ben tunç muyum? Aynı vardan var olmuşuz, sen gümüşsün ben saç mıyım?", c: "Topraktan gelen eşitlik ve kibrin anlamsızlığı." },
+      { s: "Desmond Tutu", e: "Güney Afrika", q: "Ubuntu: 'Ben, biz olduğumuz için benim.' Benim insanlığım senin insanlığına sıkı sıkıya bağlıdır.", c: "Kozmik bağlılık felsefesi." }
+    ];
+
+    const SAGES_DATA = [
+      { name: "Yunus Emre", origin: "🇹🇷 Anadolu", concept: "Evrensel Aşk & Gönül", quote: "Ben gelmedim dava için, benim işim sevi için. Dostun evi gönüllerdir, gönüller yapmaya geldim." },
+      { name: "Mevlana Celaleddin-i Rumi", origin: "🇮🇷/🇹🇷 Konya", concept: "Kapsayıcılık", quote: "Sevgiyle acılar tatlılaşır, sevgiyle bakırlar altın olur." },
+      { name: "Hacı Bektaş-i Veli", origin: "🇹🇷 Anadolu", concept: "72 Milleti Bir Gör", quote: "Hararet nardadır, sacda değildir. Keramet baştadır, tacda değildir. Her ne arar isen kendinde ara." },
+      { name: "Nelson Mandela", origin: "🇿🇦 Güney Afrika", concept: "Uzlaşma & Ubuntu", quote: "Görkemli olmak hiç düşmemek değil, her düştüğünde ayağa kalkabilmektir." },
+      { name: "Martin Luther King Jr.", origin: "🇺🇸 ABD", concept: "Şiddetsizlik & Rüya", quote: "Bir hayalim var: İnsanların derilerinin rengine göre değil, karakterlerinin içeriğine göre değerlendirildiği bir dünya." },
+      { name: "Malcolm X", origin: "🇺🇸 ABD", concept: "Dönüşüm & Hac Kardeşliği", quote: "Mekke'de gördüm ki; beyazı, siyahı, mavisi tek bir Allah'ın önünde birdir." },
+      { name: "Mahatma Gandhi", origin: "🇮🇳 Hindistan", concept: "Satyagraha & Şiddetsizlik", quote: "Dünyada görmek istediğin değişimin kendisi ol." },
+      { name: "Rosa Parks", origin: "🇺🇸 ABD", concept: "Sessiz Cesaret", quote: "Yorgun olduğum tek şey, boyun eğmekten yorulmuş olmamdı." },
+      { name: "Aşık Veysel", origin: "🇹🇷 Anadolu", concept: "Toprak & Eşitlik", quote: "Kürt'ü Türk'ü ne Çerkez'i, hep Adem'in oğlu kızı. Beraberce şehit gazi, yanlış yola gitmeyelim." },
+      { name: "Halil Cibran", origin: "🇱🇧 Lübnan", concept: "İnsanlık Ailesi", quote: "Yeryüzü benim memleketimdir ve insanlık benim ailemdir." },
+      { name: "Rabindranath Tagore", origin: "🇮🇳 Hindistan", concept: "Sınırsız Akıl", quote: "Vatan sevgisi güzeldir, ama insanlık sevgisi vatan sevgisinden önce gelmelidir." },
+      { name: "Desmond Tutu", origin: "🇿🇦 Güney Afrika", concept: "Affetme & Onur", quote: "Eğer adaletsizlik karşısında tarafsızsanız, ezenin tarafını seçmişsiniz demektir." },
+      { name: "José Martí", origin: "🇨🇺 Küba", concept: "La Raza Humana", quote: "İnsan ırkı tektir; vatan ise bütün insanlıktır." },
+      { name: "Simone Weil", origin: "🇫🇷 Fransa", concept: "Kök Salmak & Şefkat", quote: "Dikkat, cömertliğin en nadir ve en saf biçimidir." },
+      { name: "Wangari Maathai", origin: "🇰🇪 Kenya", concept: "Toprak & Barış Ağaçları", quote: "Ben bir sinekkuşuyum, elimden gelen bir damla suyu taşımaya devam edeceğim." },
+      { name: "James Baldwin", origin: "🇺🇸 ABD", concept: "Cesur Sevgi", quote: "İnsanlar sırf kendi acılarıyla yüzleşmemek için başkalarına eziyet ederler." }
+    ];
+
+    const POETRY_DATA = [
+      { poet: "Yunus Emre", country: "Türkiye", lines: "Ben gelmedim dava için,\nBenim işim sevi için.\nDostun evi gönüllerdir,\nGönüller yapmaya geldim.", theme: "Universal Love" },
+      { poet: "Maya Angelou", country: "ABD", lines: "In minor ways we differ,\nin major we're the same.\nWe are more alike, my friends,\nthan we are unalike.", theme: "Unity" },
+      { poet: "Sadi Şirazi", country: "İran", lines: "Human beings are members of a whole,\nIn creation of one essence and soul.\nIf one member is afflicted with pain,\nOther members uneasy will remain.", theme: "Interconnectedness" },
+      { poet: "Aşık Veysel", country: "Türkiye", lines: "Beni hor görme gardaşım,\nSen altınsın ben tunç muyum?\nAynı vardan var olmuşuz,\nSen gümüşsün ben saç mıyım?", theme: "Egalitarian Dignity" },
+      { poet: "Langston Hughes", country: "ABD", lines: "I, too, sing America.\nI am the darker brother.\nTomorrow, I'll be at the table\nWhen company comes.", theme: "Justice & Resilience" },
+      { poet: "Nazım Hikmet", country: "Türkiye", lines: "Yaşamak bir ağaç gibi tek ve hür\nve bir orman gibi kardeşçesine,\nbu hasret bizim...", theme: "Brotherhood" },
+      { poet: "Rabindranath Tagore", country: "Hindistan", lines: "Where the mind is without fear,\nWhere the world has not been broken\ninto fragments by narrow domestic walls...", theme: "Cosmic Freedom" },
+      { poet: "Pablo Neruda", country: "Şili", lines: "Pido paz para el obrero que camina,\nPido paz para el trigo que nace.\nPido paz para todos.", theme: "Universal Peace" }
+    ];
+
+    const LANGUAGES_DATA = [
+      { code: "tr", name: "Türkçe", msg: "Seni seviyorum, biz kardeşiz." },
+      { code: "en", name: "English", msg: "I love you, we are one family." },
+      { code: "ku", name: "Kurdî", msg: "Ez ji te hez dikim, em yek in." },
+      { code: "ar", name: "العربية", msg: "أحبك، نحن إخوة وأمة واحدة." },
+      { code: "es", name: "Español", msg: "Te quiero, todos somos hermanos." },
+      { code: "fr", name: "Français", msg: "Je t'aime, nous sommes une seule humanité." },
+      { code: "de", name: "Deutsch", msg: "Ich liebe dich, wir sind eins." },
+      { code: "sw", name: "Kiswahili", msg: "Nakupenda, sisi ni ndugu." },
+      { code: "az", name: "Azərbaycan", msg: "Mən səni sevirəm, biz birik." },
+      { code: "fa", name: "فارسی", msg: "دوستت دارم، ما یکی هستیم." },
+      { code: "ru", name: "Русский", msg: "Я люблю тебя, мы едины." },
+      { code: "hi", name: "हिन्दी", msg: "मैं तुमसे प्यार करता हूँ, हम सब एक हैं।" },
+      { code: "zh", name: "中文", msg: "我爱你，我们是一家人。" },
+      { code: "ja", name: "日本語", msg: "あなたを愛しています、私たちは一つです。" },
+      { code: "yo", name: "Yorùbá", msg: "Mo nifẹ rẹ, gbogbo wa jẹ ọkan." },
+      { code: "pt", name: "Português", msg: "Eu te amo, somos irmãos." },
+      { code: "it", name: "Italiano", msg: "Ti voglio bene, siamo fratelli." },
+      { code: "el", name: "Ελληνικά", msg: "Σε αγαπώ, είμαστε ένα." },
+      { code: "hy", name: "Հայերեն", msg: "Ես սիրում եմ քեզ, մենք մեկ ենք:" },
+      { code: "ko", name: "한국어", msg: "당신을 사랑합니다, 우리는 하나입니다." },
+      { code: "ur", name: "اردو", msg: "میں تم سے محبت کرتا ہوں، ہم سب ایک ہیں۔" },
+      { code: "nl", name: "Nederlands", msg: "Ik hou van jou, wij zijn één." },
+      { code: "pl", name: "Polski", msg: "Kocham cię, jesteśmy jednością." },
+      { code: "he", name: "עברית", msg: "אני אוהב אותך, כולנו אחד." }
+    ];
+
+    function runAnalysis() {
+      const text = document.getElementById('textInput').value.trim();
+      if (!text) return;
+
+      document.getElementById('resultsArea').style.display = 'block';
+
+      // 1. Önyargı Hesabı
+      let biasScore = 0;
+      let detectedBiases = [];
+      BIAS_RULES.forEach(r => {
+        const matches = text.match(r.pattern);
+        if (matches) {
+          detectedBiases.push(...matches);
+          biasScore += r.weight * matches.length;
+        }
+      });
+      biasScore = Math.min(100, biasScore);
+      document.getElementById('biasScore').innerText = biasScore + '/100';
+      document.getElementById('biasBar').style.width = biasScore + '%';
+      document.getElementById('biasStatus').innerText = biasScore === 0 ? "Durum: Temiz & Samimi" : (biasScore < 40 ? "Durum: Dikkat" : "Durum: Yüksek Ayrımcılık");
+      document.getElementById('biasDetail').innerText = detectedBiases.length > 0 
+        ? "Tespit edilen sert ifadeler: " + Array.from(new Set(detectedBiases)).join(", ")
+        : "Ayrımcı ifade bulunamadı; nezaket ve saygı dili hakim.";
+
+      // 2. Empatik Dönüşüm
+      let transformed = text;
+      TR_TRANSFORM.forEach(t => {
+        transformed = transformed.replace(t.p, t.r);
+      });
+      transformed = transformed.charAt(0).toUpperCase() + transformed.slice(1);
+      document.getElementById('transformedText').innerText = transformed;
+      const tips = [
+        "Farklılıklar bizi zayıflatmaz; bir bahçenin türlü çiçekleri gibi güzelleştirir.",
+        "Önyargı bir kördüğümdür; oysa her insan anlaşılmak isteyen bir candır.",
+        "Ubuntu: 'Ben, biz olduğumuz için benim.' Karşındakinin onuru kendi onurundur."
+      ];
+      document.getElementById('harmonyTip').innerText = tips[Math.floor(Math.random() * tips.length)];
+
+      // 3. Birlik Endeksi
+      let unityMatches = 0;
+      let bridgeCats = new Set();
+      UNITY_WORDS.forEach(u => {
+        const m = text.match(u.p);
+        if (m) {
+          unityMatches += m.length;
+          bridgeCats.add(u.cat);
+        }
+      });
+      let unityScore = Math.min(100, (unityMatches * 15) + (bridgeCats.size * 8));
+      document.getElementById('unityScore').innerText = unityScore + '/100';
+      document.getElementById('unityBar').style.width = unityScore + '%';
+      const level = unityScore >= 80 ? "Gönül Güneşi" : (unityScore >= 50 ? "Birlik Çerağı" : (unityScore > 0 ? "Filizlenen Umut" : "Toprak Bekliyor"));
+      document.getElementById('unityLevel').innerText = "Makam: " + level;
+      document.getElementById('unityDetail').innerText = bridgeCats.size > 0
+        ? "Kurulan Köprüler: " + Array.from(bridgeCats).join(", ")
+        : "Henüz birleştirici köprü kelime tespit edilemedi. Bir tatlı söz dünyayı güzelleştirir.";
+
+      // 4. Bilgelik Tavsiyesi
+      const w = WISDOM_LIST[Math.floor(Math.random() * WISDOM_LIST.length)];
+      document.getElementById('wisdomQuote').innerText = `«${w.q}»`;
+      document.getElementById('wisdomAuthor').innerText = `— ${w.s} (${w.e})`;
+      document.getElementById('wisdomContext').innerText = `Rehberlik: ${w.c}`;
+    }
+
+    // Populate Grids
+    function populate() {
+      // Sages
+      const sc = document.getElementById('sagesContainer');
+      sc.innerHTML = SAGES_DATA.map(s => `
+        <div class="item-card">
+          <div class="item-tag">${s.origin} • ${s.concept}</div>
+          <h4>${s.name}</h4>
+          <p style="font-size: 0.9rem; font-style: italic; color: #cbd5e1; margin-top: 8px;">«${s.quote}»</p>
+        </div>
+      `).join('');
+
+      // Poetry
+      const pc = document.getElementById('poetryContainer');
+      pc.innerHTML = POETRY_DATA.map(p => `
+        <div class="item-card">
+          <div class="item-tag">${p.country} • ${p.theme}</div>
+          <h4>${p.poet}</h4>
+          <div class="poem-lines">${p.lines}</div>
+        </div>
+      `).join('');
+
+      // Languages
+      const lc = document.getElementById('languagesContainer');
+      lc.innerHTML = LANGUAGES_DATA.map(l => `
+        <div class="item-card">
+          <div class="item-tag">${l.code.toUpperCase()}</div>
+          <h4>${l.name}</h4>
+          <p style="font-size: 1.05rem; color: #fde68a; font-weight: 600; margin-top: 8px;">${l.msg}</p>
+        </div>
+      `).join('');
+
+      // Stories
+      const stc = document.getElementById('storiesContainer');
+      stc.innerHTML = `
+        <div class="card">
+          <h2>🚂 Bir Trende Yaşananlar (Ankara Garı)</h2>
+          <p style="color: #cbd5e1; font-style: italic; margin-bottom: 8px;">"Bu tren ne kadar geç kalır sizce?" — "Bilmiyorum, ama beraber beklersek daha kolay geçer."</p>
+          <p style="font-size: 0.95rem; color: var(--text-muted);">Gönül kapısını açmak için büyük nutuklara gerek yoktur; bazen sıradan ve samimi bir soru yeterlidir.</p>
+        </div>
+        <div class="card">
+          <h2>🌿 Zeytin Dalını Uzatmak (Ege'de Bir Bahçe)</h2>
+          <p style="color: #cbd5e1; font-style: italic; margin-bottom: 8px;">"Hadi oğlum, şu tepsiyi yan komşuya götür, 'komşuluk hakkıdır' de."</p>
+          <p style="font-size: 0.95rem; color: var(--text-muted);">Önyargı konuşulmadığında büyüyen bir gölgedir; tek bir sıcak ekmek ve zeytin tabağı görünmez duvarları yıkar.</p>
+        </div>
+        <div class="card">
+          <h2>🥖 Sınırların Ötesindeki Ekmek (Gaziantep Fırını)</h2>
+          <p style="color: #cbd5e1; font-style: italic; margin-bottom: 8px;">"Helal olsun bacım. Bu ekmek senin de hakkın, bu çocuğun da hakkı."</p>
+          <p style="font-size: 0.95rem; color: var(--text-muted);">Merhamet için tercümana ihtiyaç yoktur. Merhamet, her dilde aynı hissedilen evrensel anne kucağıdır.</p>
+        </div>
+      `;
+    }
+
+    window.onload = populate;
+  </script>
+</body>
+</html>
