@@ -59,6 +59,12 @@ Bizim için dünya, dikenli tellerle, pasaport renkleriyle ve siyasi sınırlarl
 
 Her insan dünyaya tertemiz bir vicdanla ve sevme kabiliyetiyle doğar. Ten rengi, göz kapağının kıvrımı, anadilin melodisi ya da doğulan coğrafya; bir insanın diğerine üstünlük kurma aracı değil; kâinat orkestrasının en zengin, en ahenkli enstrümanlarıdır.
 
+<p align="center">
+  <img src="assets/real-human-unity.jpg" alt="Evrensel İnsan Kardeşliği ve Birliktelik" width="85%" />
+  <br/>
+  <em>"Farklılıklarımız bir tehdit değil; insanlık orkestrasının en ahenkli sesleridir."</em>
+</p>
+
 ---
 
 ## 🧐 Ontolojik Temel: Neden "Kördüğüm Değil Gördüğüm"?
@@ -212,11 +218,23 @@ Doğu ve Afrika bilgeliği, insanı evrenden ayrı bir fert olarak değil; kaina
 
 Zulmün, ayrımcılığın ve köleliğin en koyu karanlığında sesini yükseltenler, insanlığın ortak hafızasını aydınlatmıştır.
 
+<p align="center">
+  <img src="assets/real-mlk-march.jpg" alt="Dr. Martin Luther King Jr. - 1963 Washington Yürüyüşü" width="60%" />
+  <br/>
+  <em>Dr. Martin Luther King Jr. — 1963 Tarihi Washington Yürüyüşü ("I Have a Dream")</em>
+</p>
+
 > *"Bir hayalim var: Gün gelecek, dört küçük çocuğum, derilerinin rengine göre değil, karakterlerinin içeriğine göre değerlendirildikleri bir ülkede yaşayacaklar.*  
 > *Bir hayalim var: Georgia'nın kızıl tepelerinde, eski kölelerin çocukları ile eski köle sahiplerinin çocukları aynı kardeşlik masasında birlikte oturabilecekler.*  
 > *Karanlık karanlığı kovamaz; bunu sadece ışık yapabilir. Nefret nefreti kovamaz; bunu sadece sevgi yapabilir.*  
 > *Herhangi bir yerdeki adaletsizlik, her yerdeki adalet için doğrudan bir tehdittir."*  
 > — **Dr. Martin Luther King Jr. (1963, Washington)**
+
+<p align="center">
+  <img src="assets/real-nelson-mandela.jpg" alt="Nelson Mandela - Ubuntu ve Affetmenin Zaferi" width="50%" />
+  <br/>
+  <em>Nelson Mandela — "Ubuntu: Ben, biz olduğumuz için benim." (1994)</em>
+</p>
 
 > *"Hiç kimse derisinin rengi, geçmişi ya da inandığı din yüzünden bir diğerinden nefret ederek doğmaz.*  
 > *İnsanlar nefret etmeyi sonradan öğrenirler.*  
