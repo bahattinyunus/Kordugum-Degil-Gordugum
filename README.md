@@ -12,7 +12,7 @@
 
 ---
 
-[![CI - Gönül Testleri](https://github.com/arch-yunus/Kordugum-Degil-Gordugum/actions/workflows/ci.yml/badge.svg)](https://github.com/arch-yunus/Kordugum-Degil-Gordugum/actions/workflows/ci.yml)
+[![CI - Gönül Testleri](https://github.com/bahattinyunus/Kordugum-Degil-Gordugum/actions/workflows/ci.yml/badge.svg)](https://github.com/bahattinyunus/Kordugum-Degil-Gordugum/actions/workflows/ci.yml)
 ![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue.svg)
 ![Diller](https://img.shields.io/badge/D%C3%BCnya%20Dilleri-24%20Dil-purple.svg)
 ![Bilgeler](https://img.shields.io/badge/Bilgelik%20Ar%C5%9Fivi-16%20D%C3%BC%C5%9F%C3%BCn%C3%BCr-gold.svg)
